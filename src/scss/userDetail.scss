@@ -1,0 +1,58 @@
+
+.userDetail-container{
+    display: flex;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(211, 205, 205, 0.6) 0px 5px 15px;
+    position: relative;
+    overflow: hidden;
+    .userDetail-info{
+        font-size: 3rem;
+        margin: 0 0 20px 0;
+        color: gray;
+    }
+
+    .userDetail-editButton{
+        color: hsl(253, 94%, 65%);
+        font-size: 2rem;
+        position: absolute;
+        padding: 10px;
+        background-color: rgba($color: #6439ff, $alpha: 0.1);
+        right: 0;
+        top: 0;
+        border-radius: 0 0 0 10px;
+        cursor: pointer;
+    }
+
+    img{
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+    .userDetail-left{
+        flex: 4;
+    }
+    .userDetail-right{
+        flex: 6;
+        margin: 50px;
+        
+        .userDetail-title{
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        span{
+            font-size: 2rem;
+
+        }
+
+        .userDetail-item{
+            margin: 10px 0;
+            span:first-child{
+                font-weight: 700;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,41 @@
+.home-container{
+    display: flex;
+
+    .home-content{
+        flex:7;
+    }
+
+    .home-widgets{
+        display: flex;
+        padding: 20px;
+        gap:10px;
+    }
+
+    .home-charts{
+        display: flex;
+        padding: 5px 20px;
+    }
+
+    .home-list-container{
+        margin: 20px;
+        box-shadow: rgba(211, 205, 205, 0.6) 0px 5px 15px;
+        border-radius: 5px;
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        .home-list-title{
+            margin: 0 0 20px 0;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: gray;
+        }
+
+        .home-list-user{
+            flex: 1;
+        }
+        .home-list-movie{
+            flex: 3;
+        }
+
+    }
+}

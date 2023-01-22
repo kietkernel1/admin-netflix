@@ -1,0 +1,33 @@
+.table-container{
+    
+    .table-cell{
+        
+        font-size: 1.6rem;
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        
+    }
+    .table-cell-item{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .viewButton{
+        font-weight: 600;
+        cursor: pointer;
+        margin: 0 30px 0 10px;
+        color: rgb(0, 0, 139);
+        border-radius: 5px;
+        border: 1px solid rgb(0, 0, 139);
+        padding: 8px;
+        &:hover{
+            background-color: rgba(0, 0, 139, 0.2);
+        }
+    }
+
+    
+}
+

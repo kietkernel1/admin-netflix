@@ -1,0 +1,13 @@
+.column-container{
+    flex: 10;
+
+    box-shadow: rgba(211, 205, 205, 0.6) 0px 5px 15px;
+    border-radius: 5px;
+    padding: 10px;
+    color: gray;
+    font-weight: 600;
+    
+    .column-title{
+        margin-bottom: 10px;
+    }
+}

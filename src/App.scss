@@ -1,0 +1,61 @@
+.app.dark{
+    background-color: var(--color-darkTheme-background);
+    color: var(--color-darkTheme-font);
+
+    .grid-chart{
+        stroke: rgba($color: #FFF, $alpha: 0.3);
+    }
+    .table-container{
+        background-color: var(--color-darkTheme);
+        box-shadow:  var(--color-darkTheme-font) 0px 5px 15px;
+        .table-cell{
+            
+            color: var(--color-darkTheme-font);
+        }
+    }
+
+    .navbar-container, .sidebar-container, .sidebar-top, .navbar-search, .table-cell {
+        border-color: rgba($color: #FFF, $alpha: 0.3);
+        input{
+            background-color: var(--color-darkTheme);
+            color: var(--color-darkTheme-font);
+        }
+        .sidebar-logo{
+            color: var(--color-darkTheme-font);
+        }
+
+        ul{
+            li{
+                &:hover{
+                background-color: rgba($color: #FFF, $alpha: 0.7) ;
+                }
+                .side-bar-icon{
+                    color: var(--color-darkTheme-font);
+                }
+            }
+        }
+    }
+
+    .database-grid{
+        border-color: rgba($color: #FFF, $alpha: 0.3);
+        color: var(--color-darkTheme-font);
+        box-shadow:  var(--color-darkTheme-font) 0px 5px 15px;
+        .status, .viewButton, .deleteButton{
+            color: var(--color-darkTheme-font);
+            border: none;
+        }
+
+        p, button{
+            color: var(--color-darkTheme-font);
+        }
+
+
+    }
+
+    .new-form-label, .new-form-input{
+        
+        
+            color: var(--color-darkTheme-font) !important;
+    
+    }
+}

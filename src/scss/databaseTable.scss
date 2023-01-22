@@ -1,0 +1,93 @@
+.database-container{
+    padding: 20px;
+    
+    p{
+        font-size: 1.6rem;
+    }
+
+    .status{
+        padding: 7px 5px;
+        border-radius: 10px;
+    
+        &.active{
+            color: green;
+            background-color: rgba(0, 128, 0, 0.2 );
+        }
+        &.passive{
+            color: crimson;
+            background-color: rgba(157, 34, 53, 0.2);
+        }
+    
+        &.pending{
+            color: goldenrod;
+            background-color: rgba(224, 165, 38, 0.2);
+        }
+    }
+
+    .cellAction{
+        span{
+            padding: 10px;
+            border-radius: 5px;
+            border: 1pt dotted ;
+            cursor: pointer;
+        }
+        .viewButton{
+            color: darkblue;
+            margin: 0 30px 0 10px;
+            &:hover{
+                background-color: rgba(0, 0, 139, 0.2 );
+            }
+        }
+        .deleteButton{
+            color: darkred;
+            &:hover{
+                background-color: rgba(139, 0, 0, 0.2 );
+            }
+        }
+    }
+}
+
+.nameWithImg{
+
+    display: flex;
+    align-items: center;
+    img{
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+}
+
+.database-function{
+    display: flex;
+    justify-content: space-between;
+
+    .database-addBtn{
+        margin-bottom: 10px;
+    
+        button{
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+    }
+    
+    .database-search{
+        display: flex;
+        align-items: center;
+        border: 1px solid black;
+        width: 300px;
+        margin-bottom: 10px;
+        border-radius: 2px;
+        padding: 5px;
+        input{
+            border: none;
+            width: 100%;
+            outline: none;
+            background-color: inherit;
+        }
+    }
+
+    
+}

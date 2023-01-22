@@ -1,0 +1,121 @@
+
+
+.new-top{
+    border-radius: 10px;
+    box-shadow: rgba(211, 205, 205, 0.6) 0px 5px 15px;
+    padding: 10px;
+    margin: 20px;
+
+    h1{
+        font-size: 2rem;
+        margin: 0;
+        color: gray;
+    }
+}
+
+.new-movie{
+    img{
+        width: 300px;
+        height: 150px;
+        object-fit: contain;
+    }
+
+    video{
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .icon-loading{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.new-bottom{
+
+    display: flex;
+    border-radius: 10px;
+    box-shadow: rgba(211, 205, 205, 0.6) 0px 5px 15px;
+    margin: 20px;
+    padding:20px;
+    .new-left{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .new-avatar{
+            img{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .new-upload-label{
+            color: inherit;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 10px;
+            .new-upload-icon{
+                font-weight: 600;
+                font-size: 4rem;
+                margin-left: 10px;
+                cursor: pointer;
+                &:hover{
+                    color: rgba($color: black, $alpha: 0.4);
+                }
+            }
+        }
+    }
+
+    .new-right{
+        flex: 3;
+        
+        .new-form-item{
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+        }
+        .new-form-button{
+            width: 150px;
+            height: 50px;
+            font-size: 1.6rem;
+            align-self: center;
+        }
+
+        .new-form-checkbox{
+            width: 48%;
+            display: flex;
+            align-items: center;
+        }
+
+        .new-upload-label{
+            color: inherit;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 10px;
+            .new-upload-icon{
+                font-weight: 600;
+                font-size: 4rem;
+                margin-left: 10px;
+                cursor: pointer;
+                &:hover{
+                    color: rgba($color: black, $alpha: 0.4);
+                }
+            }
+        }
+    }
+
+    p{
+        text-align: center;
+        color: red;
+        margin: 0;
+    }
+}
+

@@ -1,0 +1,81 @@
+.progress-container{
+    flex: 4;
+    box-shadow: rgba(211, 205, 205, 0.6) 0px 5px 15px;
+    border-radius: 5px;
+    padding: 10px;
+    .progress-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: gray;
+        p{
+            margin: 0;
+        }
+
+        .progress-icon{
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.progress-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .progress-circleChart{
+        width: 150px;
+        height: 150px;
+        margin: 20px 0 20px 0;
+    }
+
+    p{
+        margin: 0;
+        text-align: center;
+        font-weight: 600;
+        color: gray;
+    }
+    h1{
+        font-weight: 600;
+        font-size: 3rem;
+        margin: 15px 0;
+    }
+
+    .progress-desc{
+        font-size: 1.3rem;
+    }
+}
+
+.progress-result{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    margin-top: 30px;
+
+    .progress-result-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    div{
+        margin-top: 10px;
+        
+        }
+
+    .progress-result-value{
+        display: flex;
+        align-items: center;
+        .progress-icon{
+            font-size: 2.5rem;
+        }
+
+        &.negative{
+            color: red;
+        }
+
+        &.positive{
+            color: green
+        }
+    }
+    }
+}
