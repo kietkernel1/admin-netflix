@@ -15,24 +15,14 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import ErrorPage from "./components/ErrorPage";
 import Authorized from "./components/Authorized";
 import databaseApi from "./callApi/databaseApi";
-// const routerr= {
-//   path: "/admin",
-//   index: true,
-//   element: 
-//   <ProtectedRoute>
-//     <Layout />
-//   </ProtectedRoute>
-//   ,
-//   children:[
-//     {
-//       index: true,
-//       element: <Dashboard />
-//     }
-//   ]
-// }
+import Redirect from "./components/Redirect";
+
 const router = createBrowserRouter([
   {
-    errorElement: <ErrorPage />,
+    errorElement: 
+    <Redirect>
+      <ErrorPage />
+    </Redirect>,
     children: [
       { 
         path: "/admin",
