@@ -9,19 +9,18 @@ const axiosRefresh = axios.create({
 })
 
 axiosRefresh.interceptors.request.use(config=>{
-    
     return config
+
 }, err=>{
-    console.log("ádsad")
     throw err
 })
 
 axiosRefresh.interceptors.response.use(res=>{
+
     return res.data
 }, async err=>{
-    console.log("ádsad")
+
     if(err.response.status=== 401 || err.response.status === 403){
-       
         await fetchLogout()
     }
     throw err

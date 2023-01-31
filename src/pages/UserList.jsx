@@ -42,6 +42,7 @@ const List = () => {
   }
 
   const handleResetError = ()=>{
+    setOpen(false)
     dispatch({
       type: "RESET-MESSAGE"})
   }

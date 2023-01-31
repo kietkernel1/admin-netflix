@@ -1,28 +1,19 @@
 import React from 'react'
 import "../scss/login.scss"
-import {useForm} from "react-hook-form"
-import {authApi} from "../callApi/authApi"
-import globalStore from '../Redux/globalStore'
-import { useLocation, useNavigate, useNavigation } from 'react-router-dom'
-
-
+import { useForm } from "react-hook-form"
+import { useLocation, useNavigate } from 'react-router-dom'
+import  { fetchLogin }  from '../loginProcess/fetchLogin'
+import { useSelector } from 'react-redux'
 
 const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const state = useLocation().state
   const navigate = useNavigate();
-  const onSubmit =async (data) => {
-    try{
-    const res= await authApi.login(data)
-    
-    res.isAdmin && globalStore.dispatch({type: "LOG_IN", payload: res})
-    navigate( state?.from ? state.from : "/admin")
-
-    }catch(err){
-      console.log(err)
-      throw err
-    }
-    
+  const { error, user } = useSelector(state => state.loginReducer)
+  console.log(error)
+  const onSubmit = async (data) => {
+    await fetchLogin(data)
+    navigate( "/admin")
   };
   return (
     <div className='login-container'>
@@ -34,6 +25,7 @@ const Login = () => {
           {errors.username  && <span className='login-form-warning'>Username don't be blank</span>}
           <input type="password" {...register("password", { required: true })}/>
           {errors.password  && <span className='login-form-warning'>Password don't be blank</span>}
+          {error}
           <input type="submit" value="LOG IN"/>
         </form>
       </div>

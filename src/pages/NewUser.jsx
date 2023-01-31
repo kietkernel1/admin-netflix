@@ -86,6 +86,7 @@ const New = () => {
   },[message.error])
 
   const onSubmit = async data => {
+
     await addOne('user', {...data, ...upload}) 
     
     reset({
@@ -178,7 +179,7 @@ const New = () => {
 
                 <div className="new-form-checkbox">
                   <InputLabel htmlFor= {`new-form-isAdmin`} sx={{ fontSize:"1.6rem"}} className="new-form-label">Is Admin</InputLabel>
-                  <Checkbox {...{ inputProps: { 'aria-label': 'Checkbox demo' } }} sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }} {...register(`isAmin`)}/>
+                  <Checkbox {...{ inputProps: { 'aria-label': 'Checkbox demo' } }} sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }} {...register(`isAdmin`)}/>
                 </div>
 
               <div className="new-form-item">

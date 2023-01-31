@@ -18,32 +18,32 @@ const MovieDetail = () => {
                   </div>
 
                   <div className="movieDetail-item">
-                    <span>Brief Description: </span>
+                    <span >Brief Description: </span>
                     <span>{briefDes}</span>
                   </div>
 
                   <div className="movieDetail-item">
-                    <span>Year: </span>
+                    <span >Year: </span>
                     <span>{year}</span>
                   </div>
 
                   <div className="movieDetail-item">
-                    <span>Limit: </span>
+                    <span >Limit: </span>
                     <span>{limit}</span>
                   </div>
 
                   <div className="movieDetail-item">
-                    <span>Genre: </span>
+                    <span >Genre: </span>
                     <span>{genre}</span>
                   </div>
 
                   <div className="movieDetail-item">
-                    <span>Date created: </span>
+                    <span >Date created: </span>
                     <span>{createdAt.split("T")[0]}</span>
                   </div>
 
                   <div className="movieDetail-item">
-                    <span>Date latest update: </span>
+                    <span >Date latest update: </span>
                     <span>{updatedAt.split("T")[0]}</span>
                   </div>
 

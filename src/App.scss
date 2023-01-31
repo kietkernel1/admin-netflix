@@ -9,7 +9,6 @@
         background-color: var(--color-darkTheme);
         box-shadow:  var(--color-darkTheme-font) 0px 5px 15px;
         .table-cell{
-            
             color: var(--color-darkTheme-font);
         }
     }
@@ -49,13 +48,14 @@
             color: var(--color-darkTheme-font);
         }
 
-
     }
 
     .new-form-label, .new-form-input{
-        
-        
-            color: var(--color-darkTheme-font) !important;
-    
+            color: var(--color-darkTheme-font) !important;    
+    }
+
+    .movieDetail-img{
+        display: flex;
+        justify-content: center;
     }
 }

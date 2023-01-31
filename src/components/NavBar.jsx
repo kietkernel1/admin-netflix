@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../darkTheme/themeContextProvider';
 import "../scss/navBar.scss"
-import { Language, DarkModeOutlined, FullscreenExit, NotificationsNone, ChatBubbleOutline, List } from '@mui/icons-material';
+import { Language, DarkModeOutlined, NotificationsNone, ChatBubbleOutline, List } from '@mui/icons-material';
 import { useSelector } from "react-redux"
 const NavBar = () => {
   const context= useContext(ThemeContext)
-  const {user} = useSelector(state=> state.loginReducer)
+  const { user } = useSelector(state=> state.loginReducer)
   return (
     <div className='navbar-container'>
       
@@ -16,13 +16,7 @@ const NavBar = () => {
         </div>
         
         <div className="navbar-item" onClick={()=>context.handleOnOff(context.state?"":"On")}> 
-
           <DarkModeOutlined className='navbar-icon'/>
-  
-        </div>
-        
-        <div className="navbar-item">
-          <FullscreenExit className='navbar-icon' />
         </div>
 
         <div className="navbar-item">
@@ -40,7 +34,7 @@ const NavBar = () => {
         </div>
 
         <div className="navbar-item">
-          <img src={user.profilePic} alt="" className="navbar-avatar" />
+          <img src={user.avatar} alt="" className="navbar-avatar" />
         </div>
 
       </div>

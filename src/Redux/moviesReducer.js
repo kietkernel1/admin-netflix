@@ -38,7 +38,7 @@ export const moviesReducer= (state= INITIAL_STATE, action)=>{
                 loading: false,
                 message: {
                     error: null,
-                    status: "Delete movie successful!!!"
+                    status: null
                 }
             }
         }
@@ -49,7 +49,7 @@ export const moviesReducer= (state= INITIAL_STATE, action)=>{
                 loading: false,
                 message: {
                     error: null,
-                    status: "Delete movie failed!!!"
+                    status: null
                 }
             }
         }

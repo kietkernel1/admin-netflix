@@ -4,8 +4,10 @@ import {Dashboard ,Person, PlayCircleFilledWhite, InsertChart, Notifications, Ps
 import {Link, useNavigate} from "react-router-dom"
 import {ThemeContext} from "../darkTheme/themeContextProvider"
 import {fetchLogout} from "../loginProcess/fetchLogout"
+import { useSelector } from 'react-redux';
 
 const SideBar = () => {
+    const { user } = useSelector(state=> state.loginReducer)
     const context= useContext(ThemeContext)
     const navigate = useNavigate();
     const handleLogout= async()=>{
@@ -70,7 +72,7 @@ const SideBar = () => {
                 </li>
 
                 <h5>USER</h5>
-                <li>
+                <li onClick={()=> navigate(`/users/detail/${user['_id']}`)}>
                     <AccountCircle  className="side-bar-icon" />
                     <span>Profile</span> 
                 </li>

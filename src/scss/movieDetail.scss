@@ -5,6 +5,9 @@
     border-radius: 10px;
     box-shadow: rgba(211, 205, 205, 0.6) 0px 5px 15px;
 
+    .movieDetail-title{
+        font-size: 3rem;
+    }
     .movieDetail-content{
         display: flex;
     }
@@ -16,9 +19,21 @@
 
     .movieDetail-left{
         margin-left: 20px;
-        
 
+        .movieDetail-item{
+            margin-bottom: 10px;
+
+            span:first-child{
+                font-weight: 800;
+                font-size: 2rem;
+            }
+        }
+        
         .movieDetail-img{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
             img{
                 width: 400px;
                 height: 250px;
@@ -27,7 +42,7 @@
 
             h2{
                 margin-top: 0;
-                text-align: center;
+                font-size: 2rem;
             }
         }
         
@@ -35,11 +50,16 @@
 
     .movieDetail-right{
         margin-left: auto;
+        
         .movieDetail-item{
             video{
                 width: 700px;
                 height: 400px;
                 object-fit: cover;
+            }
+
+            h1{
+                font-size: 2rem;
             }
         }
     }

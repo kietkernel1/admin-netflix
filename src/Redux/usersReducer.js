@@ -39,7 +39,7 @@ export const usersReducer= (state = INITIAL_STATE, action) => {
                 loading: false,
                 message: {
                     error: null,
-                    status: "Delete user successful!!!"
+                    status: null
                 }
             }
         }
@@ -50,7 +50,7 @@ export const usersReducer= (state = INITIAL_STATE, action) => {
                 loading: false,
                 message: {
                     error: action.payload,
-                    status: "Delete user failed!!!"
+                    status: null
                 }
             }
         }

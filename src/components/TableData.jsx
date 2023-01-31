@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import "../scss/tableData.scss"
 import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material/';
 import databaseApi from '../callApi/databaseApi';
+import { useNavigate } from 'react-router-dom';
 
 const TableData = ({type}) => {
   const [data, setData]= useState([])
-
+  const navigate = useNavigate()
+  const handleView= (id)=>{
+    // navigate(`/users/detail/${id}`)
+  }
   useEffect(()=>{
     const fetchNew= async()=>{
       try{
@@ -19,6 +23,7 @@ const TableData = ({type}) => {
     fetchNew();
   },[type])
 
+  
 
   return (
 
@@ -44,7 +49,7 @@ const TableData = ({type}) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map(({username, title, genre, limit, time, year, profilePic, imgSm}) => (
+          {data.map(({username, title, genre, limit, time, year, profilePic, imgSm, _id}) => (
             <TableRow
               key={username || title}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -64,7 +69,13 @@ const TableData = ({type}) => {
               <TableCell className='table-cell' align="center">{year}</TableCell>
               </>
               } 
-                <TableCell className='table-cell' align="center"><p className='viewButton'>View</p></TableCell>
+                <TableCell className='table-cell' align="center">
+                  <p 
+                    className='viewButton'
+                    onClick={()=>navigate(`/${type}/detail/${_id}`)}
+                  >View
+                  </p>
+                </TableCell>
             </TableRow>
           ))}
         </TableBody>

@@ -3,7 +3,6 @@ import { useLocation, Navigate } from 'react-router-dom'
 
 const Redirect = ({children}) => {
     const pathname = useLocation().pathname
-    console.log(pathname)
 
   return pathname !== "/" 
         ? children 

@@ -53,7 +53,6 @@ export const uploadToFirebase = ({file, label}, setUpload, setLoading) => {
 export const deleteData = (url) => {
   const desertRef = ref(storage, url);
   deleteObject(desertRef).then(() => {
-    console.log("delete completed")
   }).catch((error) => {
     throw error
   })
