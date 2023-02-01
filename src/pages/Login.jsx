@@ -25,7 +25,7 @@ const Login = () => {
           {errors.username  && <span className='login-form-warning'>Username don't be blank</span>}
           <input type="password" {...register("password", { required: true })}/>
           {errors.password  && <span className='login-form-warning'>Password don't be blank</span>}
-          <p color='red'>{error}</p>
+          <p style={{color: "red", margin: 0}}>{error}</p>
           <input type="submit" value="LOG IN"/>
         </form>
       </div>
