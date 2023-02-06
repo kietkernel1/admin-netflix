@@ -9,11 +9,11 @@ const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const state = useLocation().state
   const navigate = useNavigate();
-  const { error, user } = useSelector(state => state.loginReducer)
-  console.log(error)
+  const { error } = useSelector(state => state.loginReducer)
+  console.log(state)
   const onSubmit = async (data) => {
     await fetchLogin(data)
-    navigate( "/admin")
+    navigate(state.from ? state.from : "/admin")
   };
   return (
     <div className='login-container'>

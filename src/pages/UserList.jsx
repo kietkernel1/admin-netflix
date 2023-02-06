@@ -32,13 +32,13 @@ const List = () => {
   } 
 
   const handleDeleteOne=()=>{
-    
+    setOpen(false)
     deleteOne(one.id, "user")
     if(one.urlAvatar !== "https://app.dr-psy.com/template/default-avatar.jpg"){
     deleteData(one.urlAvatar)
     }
     
-    setOpen(false)
+    
   }
 
   const handleResetError = ()=>{

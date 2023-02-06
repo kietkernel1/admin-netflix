@@ -312,11 +312,11 @@ const NewMovie = () => {
 
                 {
                   message.status === "failed" &&
-                  (<Alert severity = "error" > Add user failed!!!</Alert>)
+                  (<Alert severity = "error" > Add movie failed!!!</Alert>)
                 }
                 {
                   message.status === "success" &&
-                  <Alert severity = "success" >Add user completed!!!</Alert> 
+                  <Alert severity = "success" >Add movie completed!!!</Alert> 
                 }
 
                </Box>
