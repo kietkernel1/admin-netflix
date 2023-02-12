@@ -27,14 +27,13 @@ const ColumnChart = ({aspect, title}) => {
         const res= await usersApi.getStat()
         const data= res.reduce((result,cur)=>{
           return [...result, {month: MONTHS[cur._id-1], Total: cur.total}]
-        }
-          ,[]) 
+        },[]) 
         setStats(data);
       }catch(err){
         throw err
       }
      }
-     fetchUserStats();
+    fetchUserStats();
   },[])
 
   return (

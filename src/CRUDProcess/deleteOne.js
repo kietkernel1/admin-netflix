@@ -19,9 +19,7 @@ const deleteOne= async (id, type)=>{
             type:`DELETE-${type.toUpperCase()}-FAILED`,
             payload: err.response.data
         })  
-        
     }
-
 }
 
 export default deleteOne

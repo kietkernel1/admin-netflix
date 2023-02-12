@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import "../scss/tableData.scss"
-import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material/';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material/';
 import databaseApi from '../callApi/databaseApi';
 import { useNavigate } from 'react-router-dom';
 
 const TableData = ({type}) => {
   const [data, setData]= useState([])
   const navigate = useNavigate()
-  const handleView= (id)=>{
-    // navigate(`/users/detail/${id}`)
-  }
+
   useEffect(()=>{
     const fetchNew= async()=>{
       try{
-      const res= await databaseApi.getNew(type)
-      setData(res);
+        const res= await databaseApi.getNew(type)
+        setData(res);
       }catch(err){
         throw err 
       }
@@ -22,9 +20,7 @@ const TableData = ({type}) => {
 
     fetchNew();
   },[type])
-
   
-
   return (
 
       <TableContainer component={Paper} className='table-container'>

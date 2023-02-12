@@ -17,7 +17,6 @@ const databaseApi ={
     },
 
     addOne(type, data){
-        
         const url = type === "movie" ? `movies/upload`: `auth/register`
         return axiosClient.post(url, data)
     },
@@ -26,8 +25,6 @@ const databaseApi ={
         const url = `/${type}/find/${id}`
         return axiosClient.get(url)
     },
-
-
 }
 
 export default databaseApi;

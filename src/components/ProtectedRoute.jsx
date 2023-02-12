@@ -3,13 +3,12 @@ import { useSelector } from "react-redux";
 import { Navigate, useLocation } from 'react-router-dom';
 
 const ProtectedRoute = ({ children }) => {
-    const user = useSelector(state=> state.loginReducer.user) 
+    const user = useSelector(state => state.loginReducer.user) 
     const { pathname } = useLocation()
     
-    return  user?.isAdmin?
-        children 
-        :
-        <Navigate to="/login" state={{from: pathname}} replace= {true}/>
+    return  user?.isAdmin
+        ?children 
+        : <Navigate to="/login" state={{from: pathname}} replace= {true}/>
 
 
 }

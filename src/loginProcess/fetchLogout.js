@@ -1,6 +1,6 @@
 import { authApi } from "../callApi/authApi"
 import globalStore from '../Redux/globalStore';
-export const fetchLogout= async ()=>{
+export const fetchLogout = async () => {
     
     try{ 
         await authApi.logout();

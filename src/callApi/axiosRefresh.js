@@ -1,5 +1,5 @@
 import axios from "axios"
-import {fetchLogout} from "../loginProcess/fetchLogout"
+import { fetchLogout } from "../loginProcess/fetchLogout"
 
 const axiosRefresh = axios.create({
     baseURL: process.env.REACT_APP_API_baseURL,

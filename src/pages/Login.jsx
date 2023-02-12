@@ -10,7 +10,7 @@ const Login = () => {
   const state = useLocation().state
   const navigate = useNavigate();
   const { error } = useSelector(state => state.loginReducer)
-  console.log(state)
+  
   const onSubmit = async (data) => {
     await fetchLogin(data)
     navigate(state.from ? state.from : "/admin")

@@ -13,7 +13,6 @@ const fetchAllMovies= async (type)=>{
     }catch (err){
         throw err
     }
-
 }
 
 export default fetchAllMovies

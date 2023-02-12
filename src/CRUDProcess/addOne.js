@@ -31,5 +31,4 @@ export const addOne = async (type, data) =>{
         )
         throw err
     }
-    
 }

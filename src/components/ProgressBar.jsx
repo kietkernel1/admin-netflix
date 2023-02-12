@@ -1,6 +1,6 @@
 import React from 'react'
 import "../scss/progressBar.scss"
-import {MoreVert, KeyboardArrowDown} from '@mui/icons-material/';
+import { MoreVert, KeyboardArrowDown } from '@mui/icons-material/';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
@@ -24,7 +24,7 @@ const ProgressBar = () => {
                     <div className="progress-result-value negative">
                     <KeyboardArrowDown className='progress-icon'/>
                     $12.5k
-                        </div>
+                    </div>
                 </div>
 
                 <div className="progress-result-item">
@@ -32,7 +32,7 @@ const ProgressBar = () => {
                     <div className="progress-result-value positive">
                     <KeyboardArrowDown className='progress-icon'/>
                        $12.5k
-                        </div>
+                    </div>
                 </div>
 
                 <div className="progress-result-item">
@@ -40,7 +40,7 @@ const ProgressBar = () => {
                     <div className="progress-result-value positive">
                         <KeyboardArrowDown className='progress-icon'/>
                         $12.5k
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>

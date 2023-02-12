@@ -9,5 +9,4 @@ export const authApi= {
         const url= "/auth/logout";
         return axiosClient.delete(url, {withCredentials: true})
     }
-
 }

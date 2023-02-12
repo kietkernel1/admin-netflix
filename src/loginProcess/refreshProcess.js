@@ -1,5 +1,5 @@
 import axiosRefresh from "../callApi/axiosRefresh";
-const refreshProcess = ()=>{
+const refreshProcess = () =>{
     let isRequest= null;
     
     const fetchRefresh= async()=>{

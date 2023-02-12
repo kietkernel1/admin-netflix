@@ -1,13 +1,13 @@
-export const ON_DARKMODE= "On"
-export const OFF_DARKMODE= "Off"
-export const INITIAL_STATE= ""
+export const ON_DARKMODE = "On"
+export const OFF_DARKMODE = "Off"
+export const INITIAL_STATE = ""
 
-export const reducer= (state, action)=>{
+export const reducer = (state = INITIAL_STATE, action) => {
     switch(action){
-        case "On":
+        case ON_DARKMODE:
             return "dark"
-        case "Off":
-            return ""
+        case OFF_DARKMODE:
+            return INITIAL_STATE
         default:
             return state
     }

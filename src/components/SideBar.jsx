@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import "../scss/sideBar.scss"
-import {Dashboard ,Person, PlayCircleFilledWhite, InsertChart, Notifications, Psychology, Settings, AccountCircle, Logout} from '@mui/icons-material';
-import {Link, useNavigate} from "react-router-dom"
-import {ThemeContext} from "../darkTheme/themeContextProvider"
-import {fetchLogout} from "../loginProcess/fetchLogout"
+import { Dashboard ,Person, PlayCircleFilledWhite, InsertChart, Notifications, Psychology, Settings, AccountCircle, Logout } from '@mui/icons-material';
+import { Link, useNavigate } from "react-router-dom"
+import { ThemeContext } from "../darkTheme/themeContextProvider"
+import { fetchLogout } from "../loginProcess/fetchLogout"
 import { useSelector } from 'react-redux';
 
 const SideBar = () => {
-    const { user } = useSelector(state=> state.loginReducer)
+    const { user } = useSelector(state => state.loginReducer)
     const context= useContext(ThemeContext)
     const navigate = useNavigate();
     const handleLogout= async()=>{
